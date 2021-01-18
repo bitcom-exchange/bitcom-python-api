@@ -56,3 +56,15 @@ class MarketClient(object):
             param_map = {}
         from bitcom.service.market.get_funding_rate import GetFundingRateService
         return GetFundingRateService(param_map).request(**self.__kwargs)
+
+    def get_funding_rate_history(self, param_map=None):
+        if param_map is None:
+            param_map = {}
+        from bitcom.service.market.get_funding_rate_history import GetFundingRateHistoryService
+        return GetFundingRateHistoryService(param_map).request(**self.__kwargs)
+
+    def get_total_volume(self, param_map=None):
+        if param_map is None:
+            param_map = {}
+        from bitcom.service.market.get_total_volume import GetTotalVolumeService
+        return GetTotalVolumeService(param_map).request(**self.__kwargs)

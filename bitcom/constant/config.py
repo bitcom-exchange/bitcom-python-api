@@ -1,8 +1,8 @@
 # wafei alpha
 USER1_HOST = "https://alphaapi.bitexch.dev"
-USER1_UID = "467556"
-USER1_ACCESS_KEY = "ak-5893b237-b65f-4882-a5f4-5b9305d4daf9"
-USER1_SECRET_KEY = "dVy3S7MEbV1e9MdYGRzLqGB8vRoAGTExbIlnMS03YZ48RdhaJukrasTMkGRyKTKM"
+USER1_UID = "475183"
+USER1_ACCESS_KEY = "ak-3d4dc159-8313-4726-860e-60355ccf1d24"
+USER1_SECRET_KEY = "A2I2HuUKqx7VnxQVvJhvowvmgQ3GgunDtdsHHyEjZoQXn14zmf8hB8MZzjlgGOFg"
 
 
 # eric alpha

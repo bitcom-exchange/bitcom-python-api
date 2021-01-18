@@ -58,8 +58,21 @@ market_client = MarketClient(url=USER1_HOST, access_key=USER1_ACCESS_KEY, secret
 # market_summary_response = market_client.get_market_summary(param_map)
 # LogInfo.output("Get market summary: ", market_summary_response)
 
-param_map = {
-    'instrument_id': 'BTC-PERPETUAL',
-}
-funding_rate_response = market_client.get_funding_rate(param_map)
-LogInfo.output("Get funding rate: ", funding_rate_response)
+# param_map = {
+#     'instrument_id': 'BTC-PERPETUAL',
+# }
+# funding_rate_response = market_client.get_funding_rate(param_map)
+# LogInfo.output("Get funding rate: ", funding_rate_response)
+
+# param_map = {
+#     'instrument_id': 'BTC-PERPETUAL',
+#     'start_time': 1610784000000,
+#     'end_time': 1610870400000,
+#     'history_type': "8H",
+# }
+# response = market_client.get_funding_rate_history(param_map)
+# LogInfo.output("Get funding rate history: ", response)
+
+
+response = market_client.get_total_volume()
+LogInfo.output("Get total volume: ", response)
