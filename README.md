@@ -13,6 +13,12 @@
 pip3 install bitcom
 ```
 
+**Host**
+
+You can get the latest hosts here, including REST API and WebSocket.
+
+https://www.bit.com/docs/en-us/#api-hosts-production
+
 **Rest client example**
 
 ```python
@@ -20,9 +26,6 @@ from bitcom.client.market_client import MarketClient
 from bitcom.utils import *
 from bitcom.constant import *
 
-# Please choose an API host:
-# Testnet: https://testapi.bitexch.dev
-# Main: https://api.bitexch.dev
 # And add your personal access key and secret key
 market_client = MarketClient(url=USER1_HOST, access_key=USER1_ACCESS_KEY, secret_key=USER1_SECRET_KEY)
 
