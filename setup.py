@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bitcom",
-    version="0.0.1",
+    version="0.0.2",
     author="Bit.com",
     author_email="kevin@bit.com",
     description="bitcom-python-api is a lightweight Python library for bit.com API, supporting Rest requests and "
