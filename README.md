@@ -1,5 +1,8 @@
 # bitcom-python-api
 
+**API Doc**  
+https://www.bit.com/docs/en-us/#introduction
+
 ## Quick Start
 
 **Prerequisite**
@@ -15,19 +18,18 @@ pip3 install bitcom
 
 **Host**
 
-You can get the latest hosts here, including REST API and WebSocket.
+You can get the latest production/testnet hosts here, including REST API and WebSocket.
 
 https://www.bit.com/docs/en-us/#api-hosts-production
 
-**Rest client example**
+**Rest public client example**
 
 ```python
 from bitcom.client.market_client import MarketClient
 from bitcom.utils import *
 from bitcom.constant import *
 
-# And add your personal access key and secret key
-market_client = MarketClient(url=USER1_HOST, access_key=USER1_ACCESS_KEY, secret_key=USER1_SECRET_KEY)
+market_client = MarketClient(url=USER1_HOST)
 
 
 param_map = {
@@ -37,7 +39,20 @@ funding_rate_response = market_client.get_funding_rate(param_map)
 LogInfo.output("Get funding rate: ", funding_rate_response)
 ```
 
+**Rest private client example**  
 
+```python
+from bitcom.client.order_client import OrderClient
+order_client = OrderClient(url=USER1_HOST, access_key='<your-access-key>', secret_key='<your-secret-key>')
+
+ret = order_client.place_new_order({
+    'instrument_id': 'BTC-PERPETUAL',
+    'qty': '1500',
+    'side': 'buy',
+    'order_type': 'market',
+})
+print(ret)
+```
 
 **Websocket subscribe example**
 
@@ -70,9 +85,6 @@ def on_wss_msg(ws, data):
     print(data)
 
 
-# Please choose an Websocket host:
-# Testnet: wss://betaws.bitexch.dev
-# Main: wss://ws.bitexch.dev
 channel = SubscribeClient(WS_HOST, on_wss_open, on_wss_msg)
 channel.start()
 
