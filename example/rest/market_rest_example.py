@@ -73,6 +73,8 @@ market_client = MarketClient(url=USER1_HOST, access_key=USER1_ACCESS_KEY, secret
 # response = market_client.get_funding_rate_history(param_map)
 # LogInfo.output("Get funding rate history: ", response)
 
+# response = market_client.get_total_volume()
+# LogInfo.output("Get total volume: ", response)
 
-response = market_client.get_total_volume()
-LogInfo.output("Get total volume: ", response)
+# response = market_client.get_currencies()
+# LogInfo.output("Get currencies: ", response)

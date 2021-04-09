@@ -15,13 +15,12 @@ order_client = OrderClient(url=USER1_HOST, access_key=USER1_ACCESS_KEY, secret_k
 # new_order_response = order_client.place_new_order(param_map)
 # LogInfo.output("Place new order: ", new_order_response)
 
-
-param_map = {
-    "orders_data": [
-        {"instrument_id": "BTC-PERPETUAL", "price": "10987.50", "qty": "100", "side": "buy"},
-        {"instrument_id": "BTC-PERPETUAL", "price": "10988.50", "qty": "100", "side": "sell"}
-    ]
-}
-
-place_batch_orders_response = order_client.place_batch_orders(param_map)
-LogInfo.output("Place batch orders: ", place_batch_orders_response)
+# param_map = {
+#     "orders_data": [
+#         {"instrument_id": "BTC-PERPETUAL", "price": "10987.50", "qty": "100", "side": "buy"},
+#         {"instrument_id": "BTC-PERPETUAL", "price": "10988.50", "qty": "100", "side": "sell"}
+#     ]
+# }
+#
+# place_batch_orders_response = order_client.place_batch_orders(param_map)
+# LogInfo.output("Place batch orders: ", place_batch_orders_response)

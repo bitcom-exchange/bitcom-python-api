@@ -9,5 +9,5 @@ ws_client = WsAuthClient(url=USER1_HOST, access_key=USER1_ACCESS_KEY, secret_key
 # version_response = system_client.get_system_version()
 # LogInfo.output("Get API version: ", version_response)
 
-token_response = ws_client.get_ws_auth_token()
-LogInfo.output("Get websocket token: ", token_response)
+# token_response = ws_client.get_ws_auth_token()
+# LogInfo.output("Get websocket token: ", token_response)

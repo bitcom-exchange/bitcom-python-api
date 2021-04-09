@@ -32,11 +32,11 @@ block_trade_client = BlockTradeClient(url=USER1_HOST, access_key=USER1_ACCESS_KE
 # query_block_trades_response = block_trade_client.query_block_trades(param_map)
 # LogInfo.output("Query block trade orders: ", query_block_trades_response)
 
-param_map = {
-    'bt_source': 'paradigm',
-    'label': 'uuid-3',
-    'instrument_id': 'BTC-19SEP20-10875-C',
-}
-
-query_block_trades_response = block_trade_client.query_block_trades_by_platform(param_map)
-LogInfo.output("Query block trade orders by platform: ", query_block_trades_response)
+# param_map = {
+#     'bt_source': 'paradigm',
+#     'label': 'uuid-3',
+#     'instrument_id': 'BTC-19SEP20-10875-C',
+# }
+#
+# query_block_trades_response = block_trade_client.query_block_trades_by_platform(param_map)
+# LogInfo.output("Query block trade orders by platform: ", query_block_trades_response)
