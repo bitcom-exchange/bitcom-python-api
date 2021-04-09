@@ -71,14 +71,14 @@ token_response = ws_client.get_ws_auth_token()
 LogInfo.output("Get websocket token: ", token_response)
 
 def on_wss_open(ws):
-    cmd = """{"type": "subscribe", "instruments": ["BTC-PERPETUAL"],
-     "channels": ["depth1"], "interval": "raw", "token": {your_token}}"""
+    cmd = {"type": "subscribe", "instruments": ["BTC-PERPETUAL"],
+           "channels": ["ticker"], "interval": "raw", "token": "{your_token}"}
 
-    # check json
-    obj = json.loads(cmd)
+    # convert to string
+    cmdStr = json.dumps(cmd)
 
-    print('send subscribe cmd: ' + cmd)
-    ws.send(cmd)
+    print('send subscribe cmd: ' + cmdStr)
+    ws.send(cmdStr)
 
 
 def on_wss_msg(ws, data):
