@@ -17,9 +17,10 @@ order_client = OrderClient(url=USER1_HOST, access_key=USER1_ACCESS_KEY, secret_k
 
 
 param_map = {
+    "currency": "ETH",
     "orders_data": [
-        {"instrument_id": "BTC-PERPETUAL", "price": "10987.50", "qty": "100", "side": "buy"},
-        {"instrument_id": "BTC-PERPETUAL", "price": "10988.50", "qty": "100", "side": "sell"}
+        {"instrument_id": "ETH-PERPETUAL", "price": "2000", "qty": "100", "side": "buy"},
+        {"instrument_id": "ETH-PERPETUAL", "price": "2000", "qty": "100", "side": "sell"}
     ]
 }
 
