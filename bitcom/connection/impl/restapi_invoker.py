@@ -10,7 +10,6 @@ def check_response(response):
 
 def call_sync(request, is_checked=False):
     if request.method == "GET":
-        # print("call_sync url : " , request.host + request.url)
         response = session.get(request.host + request.url, headers=request.header)
         if is_checked is True:
             return response.text
@@ -19,8 +18,6 @@ def call_sync(request, is_checked=False):
         except Exception as ex:
             print("recv error: ", response.text, "\nexception: ", ex)
             return
-        else:
-            print("recv data: ", dict_data)
         return dict_data
 
     elif request.method == "POST":
@@ -30,6 +27,4 @@ def call_sync(request, is_checked=False):
         except Exception as ex:
             print("recv error: ", response.text, "\nexception: ", ex)
             return
-        else:
-            print("recv data: ", dict_data)
         return dict_data

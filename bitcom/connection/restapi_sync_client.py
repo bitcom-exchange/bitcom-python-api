@@ -127,7 +127,7 @@ class RestApiSyncClient(object):
 
     def __get_signature(self, api_path, param_map):
         str_to_sign = api_path + '&' + self.__encode_object(param_map)
-        print('str_to_sign = ' + str_to_sign)
+        # print('str_to_sign = ' + str_to_sign)
         sig = hmac.new(self.__secret_key.encode('utf-8'), str_to_sign.encode('utf-8'),
                        digestmod=hashlib.sha256).hexdigest()
         return sig

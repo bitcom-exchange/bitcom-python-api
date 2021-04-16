@@ -68,3 +68,9 @@ class MarketClient(object):
             param_map = {}
         from bitcom.service.market.get_total_volume import GetTotalVolumeService
         return GetTotalVolumeService(param_map).request(**self.__kwargs)
+
+    def get_currencies(self, param_map=None):
+        if param_map is None:
+            param_map = {}
+        from bitcom.service.market.get_currencies import GetCurrenciesService
+        return GetCurrenciesService(param_map).request(**self.__kwargs)
