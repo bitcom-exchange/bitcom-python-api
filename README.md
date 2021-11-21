@@ -1,7 +1,7 @@
 # bitcom-python-api
 
 **API Doc**  
-https://www.bit.com/docs/en-us/#introduction
+https://www.bit.com/docs/en-us/futures.html#introduction
 
 ## Quick Start
 
