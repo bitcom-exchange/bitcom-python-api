@@ -1,5 +1,7 @@
 # bitcom-python-api
 
+# This is old COIN-M client, for new and completed client supporting SPOT/USD-M etc, use https://github.com/bitcom-exchange/bitcom-python-umapi
+
 **API Doc**  
 https://www.bit.com/docs/en-us/futures.html#introduction
 
