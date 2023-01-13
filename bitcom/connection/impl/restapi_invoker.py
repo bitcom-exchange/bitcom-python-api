@@ -14,7 +14,7 @@ def call_sync(request, is_checked=False):
         if is_checked is True:
             return response.text
         try:
-            dict_data = json.loads(response.text, encoding="utf-8")
+            dict_data = json.loads(response.text)
         except Exception as ex:
             print("recv error: ", response.text, "\nexception: ", ex)
             return
@@ -23,7 +23,7 @@ def call_sync(request, is_checked=False):
     elif request.method == "POST":
         response = session.post(request.host + request.url, data=json.dumps(request.post_body), headers=request.header)
         try:
-            dict_data = json.loads(response.text, encoding="utf-8")
+            dict_data = json.loads(response.text)
         except Exception as ex:
             print("recv error: ", response.text, "\nexception: ", ex)
             return
